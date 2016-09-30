@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="100.0" prefWidth="200.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.DialogviewController">
+   <children>
+      <Button layoutX="125.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleOk" text="确定" />
+      <Label layoutX="14.0" layoutY="14.0" styleClass="label-bright" text="提示" />
+      <Label fx:id="msgField" layoutX="61.0" layoutY="35.0" styleClass="label-bright" text="Label" />
+   </children>
+</AnchorPane>

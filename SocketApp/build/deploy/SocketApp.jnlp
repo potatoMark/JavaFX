@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SocketApp.jnlp">
+  <information>
+    <title>SocketApp</title>
+    <vendor>mark</vendor>
+    <description>SocketApp</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SocketApp.jar" size="12095" download="eager" />
+    <jar href="libs\ch.qos.logback.classic_1.0.0.jar" size="246707" download="eager" />
+    <jar href="libs\ch.qos.logback.core_1.0.0.jar" size="327912" download="eager" />
+    <jar href="libs\commons-logging-1.1.1.jar" size="60686" download="eager" />
+    <jar href="libs\log4j-1.2.13.jar" size="358180" download="eager" />
+    <jar href="libs\org.openscada.external.jcifs_1.2.25.201305291039.jar" size="424905" download="eager" />
+    <jar href="libs\org.openscada.external.jcifs_1.2.25.v20140625-1257.jar" size="419884" download="eager" />
+    <jar href="libs\org.openscada.external.snmp4j_2.2.5.v20140625-1226.jar" size="501013" download="eager" />
+    <jar href="libs\org.openscada.jinterop.core_1.1.0.v20130529.jar" size="558321" download="eager" />
+    <jar href="libs\org.openscada.jinterop.core_2.1.8.v20140625-1417.jar" size="557979" download="eager" />
+    <jar href="libs\org.openscada.jinterop.deps_1.1.0.v20130529.jar" size="127516" download="eager" />
+    <jar href="libs\org.openscada.jinterop.deps_1.2.0.v20140625-1417.jar" size="100795" download="eager" />
+    <jar href="libs\org.openscada.opc.dcom_1.1.0.v20130529.jar" size="58208" download="eager" />
+    <jar href="libs\org.openscada.opc.dcom_1.2.0.v20140625-1421.jar" size="58988" download="eager" />
+    <jar href="libs\org.openscada.opc.lib_1.1.0.v20130529.jar" size="53137" download="eager" />
+    <jar href="libs\org.openscada.opc.lib_1.2.0.v20140625-1436.jar" size="53843" download="eager" />
+    <jar href="libs\slf4j.api_1.6.4.jar" size="25962" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="com.mark.socket.MainApp"  name="SocketApp" />
+  <update check="background"/>
+</jnlp>

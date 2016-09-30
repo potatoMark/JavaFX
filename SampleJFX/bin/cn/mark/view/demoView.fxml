@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="1024.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.mark.view.demoViewController">
+   <children>
+      <Button layoutX="46.0" layoutY="44.0" mnemonicParsing="false" text="b" />
+      <ChoiceBox fx:id="cc" layoutX="118.0" layoutY="44.0" prefHeight="23.0" prefWidth="102.0" />
+      <ListView fx:id="lv" layoutX="236.0" layoutY="44.0" prefHeight="114.0" prefWidth="200.0" />
+      <VBox layoutX="43.0" layoutY="250.0" spacing="5.0">
+         <children>
+            <Label layoutX="43.0" layoutY="250.0" text="Table View" />
+            <TableView fx:id="tableView" editable="true" layoutX="43.0" layoutY="265.0" opacity="0.96" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="firstName" prefWidth="96.0" text="firstName" />
+                <TableColumn fx:id="lastName" prefWidth="102.0" text="lastName" />
+              </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="2.0" right="6.0" top="3.0" />
+         </padding>
+      </VBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <TreeView fx:id="treeView" layoutX="298.0" layoutY="210.0" prefHeight="200.0" prefWidth="200.0" />
+      <ProgressBar fx:id="pBar" layoutX="444.0" layoutY="118.0" prefWidth="200.0" progress="0.0">
+         <tooltip>
+            <Tooltip text="Empty Tooltip" />
+         </tooltip>
+      </ProgressBar>
+      <ProgressIndicator fx:id="pInd" layoutX="658.0" layoutY="108.0" progress="0.0" />
+      <Slider fx:id="slidar" layoutX="498.0" layoutY="170.0" />
+      <Hyperlink fx:id="hLink" layoutX="530.0" layoutY="222.0" text="www.baidu.com">
+         <tooltip>
+            <Tooltip style="-fx-background-color: linear-gradient(#e2ecfe, #99bcfd);;" text="Empty Tooltip " textAlignment="CENTER" wrapText="true" />
+         </tooltip>
+      </Hyperlink>
+      <Text fx:id="text" cache="true" layoutX="524.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <VBox layoutX="55.0" layoutY="147.0" spacing="15.0">
+         <children>
+            <Button layoutX="55.0" layoutY="147.0" mnemonicParsing="false" style="-fx-background-color: slateblue; -fx-text-fill: red;" text="Button" />
+            <Button layoutX="91.0" layoutY="199.0" mnemonicParsing="false" text="Button" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

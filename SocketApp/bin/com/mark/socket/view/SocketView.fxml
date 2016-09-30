@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="409.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mark.socket.view.SocketViewController">
+   <children>
+      <TabPane layoutX="2.0" layoutY="2.0" prefHeight="400.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="平台通讯">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="stkMsgTextArea" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="207.0" prefWidth="713.0" wrapText="true" />
+                        <RadioButton fx:id="outRadioButton" layoutX="24.0" layoutY="227.0" mnemonicParsing="false" onAction="#handlerStkSelect" text="出库">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="group1" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="inRadioButton" layoutX="264.0" layoutY="227.0" mnemonicParsing="false" onAction="#handlerStkSelect" selected="true" text="入库" toggleGroup="$group1" />
+                        <Group fx:id="outGroup">
+                           <children>
+                              <Button fx:id="outOpenButton" layoutX="21.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleStartStkServer" text="启动" />
+                              <Button fx:id="outCloseButton" layoutX="103.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleCloseStkServer" text="关闭" />
+                              <TextField fx:id="outPortTextField" layoutX="75.0" layoutY="254.0" prefHeight="23.0" prefWidth="72.0" text="8331" />
+                              <TextField fx:id="outRstTextField" layoutX="75.0" layoutY="290.0" prefHeight="23.0" prefWidth="56.0" text="00" />
+                           </children>
+                        </Group>
+                        <Label layoutX="24.0" layoutY="258.0" text="端口号：" />
+                        <Label layoutX="264.0" layoutY="254.0" text="服务器IP：" />
+                        <Group fx:id="inGroup">
+                           <children>
+                              <TextField fx:id="inRstTextField" layoutX="597.0" layoutY="250.0" prefHeight="23.0" prefWidth="56.0" text="00" />
+                              <Button fx:id="inEnterButton" layoutX="259.0" layoutY="344.0" mnemonicParsing="false" onAction="#handlerEnter" text="请求入库" />
+                              <TextField fx:id="inBodyNoTextField" layoutX="560.0" layoutY="314.0" prefHeight="23.0" prefWidth="84.0" text="        " />
+                              <TextField fx:id="inPortTextField" layoutX="498.0" layoutY="250.0" prefHeight="23.0" prefWidth="45.0" text="8325" />
+                              <ComboBox fx:id="inFromComboBox" editable="true" layoutX="329.0" layoutY="286.0" prefHeight="23.0" prefWidth="105.0" />
+                              <ComboBox fx:id="inToComboBox" editable="true" layoutX="522.0" layoutY="283.0" prefHeight="23.0" prefWidth="108.0" />
+                              <TextField fx:id="inIpTextField" layoutX="329.0" layoutY="250.0" prefHeight="23.0" prefWidth="104.0" text="10.105.250.55" />
+                              <TextField fx:id="inCrgNoTextField" layoutX="446.0" layoutY="314.0" prefHeight="23.0" prefWidth="56.0" text="001" />
+                              <ComboBox fx:id="inFromLanComboBox" layoutX="337.0" layoutY="314.0" prefHeight="23.0" prefWidth="55.0" />
+                           </children>
+                        </Group>
+                        <Label layoutX="450.0" layoutY="254.0" text="端口号：" />
+                        <Label layoutX="264.0" layoutY="286.0" text="源逻辑名：" />
+                        <Label layoutX="449.0" layoutY="286.0" text="目标逻辑名：" />
+                        <Label layoutX="264.0" layoutY="318.0" text="发送移行机：" />
+                        <Label layoutY="-15.0" text="Label" />
+                        <Label layoutX="398.0" layoutY="318.0" text="滑撬号：" />
+                        <Label layoutX="509.0" layoutY="318.0" text="吊牌号：" />
+                        <Button fx:id="stkClearButton" layoutX="666.0" layoutY="224.0" mnemonicParsing="false" onAction="#handleClearStk" text="清空日志" />
+                        <Label layoutX="35.0" layoutY="294.0" text="结果：">
+                           <tooltip>
+                              <Tooltip text="应答结果代码" />
+                           </tooltip></Label>
+                        <Label layoutX="559.0" layoutY="254.0" text="结果：" />
+                        <Separator layoutX="196.0" layoutY="224.0" orientation="VERTICAL" prefHeight="149.0" prefWidth="0.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Socket通讯">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="565.0" layoutY="41.0" text="IP" />
+                        <TextField fx:id="ipTextField" layoutX="598.0" layoutY="37.0" />
+                        <Label layoutX="565.0" layoutY="76.0" text="端口" />
+                        <TextField fx:id="portTextField" layoutX="598.0" layoutY="72.0" prefHeight="23.0" prefWidth="60.0" />
+                        <Button fx:id="connectButton" layoutX="562.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleConnect" text="连接服务器" />
+                        <Button fx:id="disconnectButton" layoutX="646.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleDisconnect" text="断开服务器" />
+                        <TextArea fx:id="msgTextArea" editable="false" layoutX="8.0" layoutY="14.0" prefHeight="205.0" prefWidth="548.0" wrapText="true" />
+                        <Button layoutX="419.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleSndMsg" text="发送电文" />
+                        <Button layoutX="492.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleClear" text="清空数据" />
+                        <TextArea fx:id="sndMsgTextArea" layoutX="8.0" layoutY="228.0" prefHeight="97.0" prefWidth="548.0" />
+                        <RadioButton fx:id="clientRadioButton" layoutX="576.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlerSelect" selected="true" text="client">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="group" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="serverRadioButton" layoutX="638.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlerSelect" text="server" toggleGroup="$group" />
+                        <Button fx:id="createButton" layoutX="562.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleCreateServer" text="创建服务器" />
+                        <Button fx:id="stopButton" layoutX="646.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleStopServer" text="停止服务器" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
